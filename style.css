@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --container-wrapper: clamp(100px, 95%, 1440px);
+}
+
+ul {
+    list-style: none;
+}
+
+input {
+    outline: none;
+}
+
+input:focus {
+    box-shadow: 0 0 4px green;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+html {
+    font-family: "Winky Sans", sans-serif;
+}
+
+body {
+    background-color: #f4f4f5;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    position: relative;
+    align-items: center;
+}
+
+.header-bg {
+    background: url("./dark-forest.jpg") center no-repeat;
+    background-size: cover;
+    width: var(--container-wrapper);
+    padding: 70px 0;
+    border-radius: 5px;
+}
+
+.header-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0 0 0 0;
+    backdrop-filter: blur(1px);
+}
+
+header h1 {
+    position: absolute;
+    font-size: 4rem;
+    color: #fff;
+    z-index: 100;
+    font-weight: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+nav ul {
+    display: flex;
+    gap: 2px;
+    width: clamp(100px, 100%, 500px);
+}
+
+nav ul li {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: #c7d3c2;
+    width: var(--container-wrapper);
+    transition: .3s ease;
+    font-weight: 100;
+}
+
+.page-1 {
+    border-radius: 5px 0 0 5px;
+}
+
+.page-3 {
+    border-radius: 0 5px 5px 0;
+}
+
+.page-nav.active {
+    background-color: #14532d;
+    color: #fff;
+}
+
+nav ul li:hover {
+    background-color: #14532d;
+    color: #fff;
+}
+
+.task {
+    display: flex;
+    justify-content: center;
+}
+
+.task-wrapper {
+    display: flex;
+    width: var(--container-wrapper);
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.task .task-header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task .task-header span {
+    font-size: clamp(25px, 100%, 48px);
+}
+
+.task .task-header button {
+    padding: 5px 40px;
+    background-color: #15803d;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-radius: 5px;
+    color: #fff;
+    transition: .3s ease;
+}
+
+.task .task-header button:hover {
+    background-color: #14532d;
+}
+
+.main-conatiner {
+    width: 100%;
+    border: 1px solid rgba(128, 128, 128, 0.601);
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 3px grey;
+}
+
+.page {
+    border: 1px solid rgba(128, 128, 128, 0.601);
+    width: 100%;
+    display: none;
+    flex-direction: column;
+}
+
+.page ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px;
+}
+
+.page ul li {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.601);
+    border-radius: 5px;
+}
+
+.active-con {
+    display: flex;
+}
+
+.task-details {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    inset: 0 0 0 0;
+    background-color: #00000082;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.active-details {
+    display: flex;
+}
+
+.task-details-con {
+    display: flex;
+    background-color: #fff;
+    padding: 10px 40px 40px 40px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.task-details-con span {
+    align-self: flex-end;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #15803d;
+    transition: .3s ease;
+}
+
+.task-details-con span:hover {
+    background-color: rgba(0, 0, 0, 0.216);
+}
+
+.task-details-con label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.task-details-con form {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.task-details-con input {
+    padding: 5px;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+}
+
+.input-section label {
+    width: 50%;
+}
+
+.input-section select {
+    padding: 5px;
+}
+
+.form-btn {
+    align-self: flex-end;
+    display: flex;
+    gap: 5px;
+}
+
+.form-btn button {
+    padding: 10px 60px;
+    border-radius: 5px;
+    transition: .3s ease;
+}
+
+#close-btn {
+    border: 1px solid #15803d;
+    color: #15803d;
+}
+
+#add-btn {
+    background-color: #15803d;
+    color: #fff;
+}
+
+@media screen and (max-width: 1080px) {
+    .form-btn button {
+        padding: 10px 20px;
+    }
+}

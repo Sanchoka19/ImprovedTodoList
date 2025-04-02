@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <script src="./main.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-bg"></div>
+        <h1>Todo App</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li class="page-1 page-nav active">Today</li>
+            <li class="page-2 page-nav">Pending</li>
+            <li class="page-3 page-nav">Overdue</li>
+        </ul>
+    </nav>
+
+    <section class="task">
+        <div class="task-wrapper">
+            <div class="task-header">
+                <span>Tasks</span>
+                <button id="add-task-btn"><span>+</span> Add Task</button>
+            </div>
+            <div class="main-conatiner">
+                <div class="today-page page active-con">
+                    <ul>
+                        <li>saba</li>
+                        <li>saba</li>
+                        <li>saba</li>
+                    </ul>
+                </div>
+                <div class="pending-page page">
+                    <ul>
+                        <li>Lana</li>
+                    </ul>
+                </div>
+                <div class="overdue-page page">
+                    <ul>
+                        <li>Lana</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="task-details">
+        <div class="task-details-con">
+            <span class="close-btn">X</span>
+            <h2>Task Details</h2>
+            <form action="">
+                <label for="Title"> Title
+                    <input type="text" name="Title" id="title" placeholder="Add a task title">
+                </label>
+                <div class="input-section">
+                    <label for="Priority">Priority
+                        <select name="Priority" id="Priority">
+                            <option value="">High</option>
+                            <option value="">Medium</option>
+                            <option value="">Low</option>
+                        </select>
+                    </label>
+                    <label for="deadline">Deadline
+                        <input type="datetime" placeholder="Enter a date">
+                    </label>
+                </div>
+                <label for="coments"> coments
+                    <input type="text" placeholder="Add any coments to your task" name="coments" id="coment">
+                </label>
+                <div class="form-btn">
+                    <button class="close-btn">Close</button>
+                    <button id="add-btn">Add Task</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
